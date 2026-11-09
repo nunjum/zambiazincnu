@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Trace: Zinc Asymmetry Framework</title>
+  <meta name="description" content="Tracing zinc and co-located lead from Kabwe, Zambia to end uses: who earns, who absorbs the harm, and what is still unverified.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab { border-bottom: 2px solid transparent; color: #a8a29e; }
+    .tab:hover { color: #fff; }
+    .tab[aria-selected="true"] { color: #f59e0b; border-bottom-color: #f59e0b; }
+    .tab:focus-visible { outline: 2px solid #f59e0b; outline-offset: -2px; }
+    /* Evidence tags. Text is always spelled out, never colour alone. */
+    .tag { display: inline-block; border-radius: 3px; padding: 0 .35rem; font: 600 .68rem/1.5 ui-monospace, monospace; letter-spacing: .03em; white-space: nowrap; vertical-align: baseline; }
+    .tag-web      { background: #1c3a4a; color: #bfe6f7; }
+    .tag-sayari   { background: #2d2a55; color: #d4d0ff; }
+    .tag-unv      { background: #4a2a12; color: #fcd9a8; border: 1px dashed #b45309; }
+    .tag-alleged  { background: #4a1d2a; color: #fbc7d4; }
+    .tag-derived  { background: #292524; color: #d6d3d1; border: 1px solid #57534e; }
+    .unv-cell { color: #fcd9a8; font-style: italic; }
+    .bar-track { background: #292524; border-radius: 0 4px 4px 0; }
+    .bar-fill  { background: #f59e0b; border-radius: 0 4px 4px 0; min-width: 2px; }
+  </style>
+</head>
+<body class="bg-stone-950 text-stone-200 antialiased">
+
+  <header class="border-b border-stone-800 bg-stone-900">
+    <div class="mx-auto max-w-5xl px-4 py-6">
+      <p class="text-xs uppercase tracking-widest text-amber-500">Assignment Iteration 2</p>
+      <h1 class="mt-1 text-2xl font-bold text-white sm:text-3xl">Project Trace: Zinc Asymmetry Framework</h1>
+      <p class="mt-2 max-w-3xl text-sm text-stone-400">
+        Tracing zinc, and the lead found alongside it, from Kabwe, Zambia to its end uses, and asking who earns
+        and who absorbs the harm. Argument: demand for transition metals rewards re-extraction of toxic waste
+        while children pay the health cost.
+      </p>
+      <p class="mt-3 max-w-3xl rounded border border-amber-700/50 bg-stone-950 p-3 text-sm text-stone-300">
+        <strong class="text-amber-400">Scope.</strong> Kabwe's poisoning is mainly <strong>lead</strong>. Zinc is the
+        co-product that makes reprocessing the waste piles profitable. Health figures below are about lead; price and
+        trade figures are about zinc.
+      </p>
+      <p class="mt-3 text-xs text-stone-400">
+        Evidence tags:
+        <span class="tag tag-sayari">SAYARI</span> Sayari trade/ownership data ·
+        <span class="tag tag-web">WEB</span> public source (URL in the log) ·
+        <span class="tag tag-alleged">ALLEGED</span> claimed, disputed or unanswered ·
+        <span class="tag tag-unv">UNVERIFIED</span> not in the data pack.
+      </p>
+    </div>
+    <nav aria-label="System views" class="mx-auto max-w-5xl overflow-x-auto px-4">
+      <ul class="flex gap-1 whitespace-nowrap text-sm" role="tablist">
+        <li role="presentation"><button role="tab" id="tab-timeline"    aria-controls="timeline"    data-view="timeline"    class="tab px-4 py-3">1. Timeline</button></li>
+        <li role="presentation"><button role="tab" id="tab-products"    aria-controls="products"    data-view="products"    class="tab px-4 py-3">2. End products</button></li>
+        <li role="presentation"><button role="tab" id="tab-ledger"      aria-controls="ledger"      data-view="ledger"      class="tab px-4 py-3">3. Financial ledger</button></li>
+        <li role="presentation"><button role="tab" id="tab-biomedical"  aria-controls="biomedical"  data-view="biomedical"  class="tab px-4 py-3">4. Biomedical harm</button></li>
+        <li role="presentation"><button role="tab" id="tab-trade"       aria-controls="trade"       data-view="trade"       class="tab px-4 py-3">5. Trade map</button></li>
+        <li role="presentation"><button role="tab" id="tab-methodology" aria-controls="methodology" data-view="methodology" class="tab px-4 py-3">6. Methodology</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl space-y-8 px-4 py-8">
+
+    <!-- 1. Timeline -->
+    <section id="timeline" data-panel role="tabpanel" aria-labelledby="tab-timeline" tabindex="0">
+      <h2 class="text-xl font-semibold text-white">Timeline: four epochs, c. 1902 – 2026</h2>
+      <p class="mt-2 max-w-3xl text-stone-400">
+        From a colonial-era lead-zinc mine, through closure and partial remediation, to permitted re-extraction of the
+        waste and a child-rights complaint now before the African Union.
+      </p>
+      <ol class="mt-6 space-y-8 border-l border-stone-700 pl-6">
+
+        <li>
+          <span class="text-sm font-mono text-amber-500">Epoch 1 · c. 1902 – 1994</span>
+          <h3 class="font-medium text-white">Lead-zinc mining at Kabwe</h3>
+          <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-400">
+            <li>The mine operated from roughly 1902, 1904 or 1906 until 1994; sources differ on the start year, so the range is shown. ZCCM owned it at closure. <span class="tag tag-web">WEB</span> HRW</li>
+            <li>Anglo American: a class action on behalf of about 140,000 women and children alleges its Kabwe operations from 1925 to 1974 contributed to the pollution. Anglo denies causing current conditions. <span class="tag tag-alleged">ALLEGED / DISPUTED</span> <span class="tag tag-web">WEB</span> BHRRC</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="text-sm font-mono text-amber-500">Epoch 2 · 1994 – 2024</span>
+          <h3 class="font-medium text-white">Closure, legacy waste and partial remediation</h3>
+          <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-400">
+            <li>About 6.4 million tonnes of uncovered waste remain. <span class="tag tag-web">WEB</span> HRW</li>
+            <li>Dec 2016: the World Bank approves ZMERIP, a US$65.6M IDA credit (a loan). It funded testing, treatment and hotspot remediation but did not remove the source. Project end date: <span class="tag tag-unv">UNVERIFIED</span> <span class="tag tag-web">WEB</span> World Bank</li>
+            <li>2016: an adult scavenger told the Global Press Journal he sold 25 kg sacks of waste for 50 kwacha (about US$5). <span class="tag tag-web">WEB</span> See the ledger.</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="text-sm font-mono text-amber-500">Epoch 3 · 2025</span>
+          <h3 class="font-medium text-white">Re-extraction of the waste</h3>
+          <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-400">
+            <li>March 2025: HRW documents waste mining and processing by South African, Chinese and local firms. "Black Mountain" is the Enviro Processing Ltd concession. Zambia has designated Kabwe zinc and lead as "critical minerals". <span class="tag tag-web">WEB</span> HRW</li>
+            <li>Miners say they sold to Datong Industries, Chengde Mining and Superdeal Investments. The companies did not respond to HRW. <span class="tag tag-alleged">ALLEGED</span></li>
+            <li>Late 2025: Zambia permitted <strong>Hua Yu Sheng</strong> to take control of most of Kabwe's lead waste for zinc extraction. <span class="tag tag-web">WEB</span> HRW op-ed. Sayari has no entity record, so ownership is <span class="tag tag-unv">UNVERIFIED</span></li>
+            <li>5 Nov 2025: appeal hearing in the Anglo American class action. <span class="tag tag-web">WEB</span> BHRRC</li>
+          </ul>
+        </li>
+
+        <li>
+          <span class="text-sm font-mono text-amber-500">Epoch 4 · 2026</span>
+          <h3 class="font-medium text-white">African Union child-rights complaint</h3>
+          <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-400">
+            <li>16 Apr 2026: IHRDA files an African Union child-rights complaint against Zambia. <span class="tag tag-web">WEB</span></li>
+            <li>20 Oct 2026: the committee was scheduled to consider the complaint. Outcome: <span class="tag tag-unv">UNVERIFIED</span> (not in the data pack).</li>
+          </ul>
+        </li>
+      </ol>
+      <p class="mt-6 rounded border border-stone-700 bg-stone-900 p-3 text-xs text-stone-400">
+        Extraction tonnage by year is not charted: the data pack has no such series. Only the ~6.4 million tonne
+        remaining-waste figure is available.
+      </p>
+    </section>
+
+    <!-- 2. End products -->
+    <section id="products" data-panel role="tabpanel" aria-labelledby="tab-products" tabindex="0" hidden>
+      <h2 class="text-xl font-semibold text-white">End products: where zinc goes</h2>
+      <p class="mt-2 max-w-3xl text-stone-400">
+        Global zinc use in 2024 by sector. This is a <strong class="text-stone-200">global</strong> breakdown; the
+        data pack cannot say what share of it comes from Kabwe waste.
+        <span class="tag tag-web">WEB</span> ILZSG via Natural Resources Canada
+      </p>
+
+      <figure class="mt-6" aria-labelledby="zn-fig-cap">
+        <figcaption id="zn-fig-cap" class="text-sm font-medium text-white">Share of global zinc use, 2024 (%)</figcaption>
+        <ul class="mt-3 space-y-2" id="zn-bars"></ul>
+        <details class="mt-3 text-xs text-stone-400">
+          <summary class="cursor-pointer text-stone-300">Table view</summary>
+          <table class="mt-2 w-full max-w-sm text-left">
+            <thead><tr><th scope="col" class="py-1 pr-4">Use</th><th scope="col" class="py-1">Share</th></tr></thead>
+            <tbody id="zn-table"></tbody>
+          </table>
+        </details>
+      </figure>
+
+      <p class="mt-6 max-w-3xl text-sm text-stone-300">
+        Galvanizing (protective zinc coating on steel) is the largest use by a wide margin. HRW lists zinc as a key
+        metal in wind turbines and also names solar and hydro. <span class="tag tag-web">WEB</span> HRW
+        No firm-level link from Kabwe to any specific product is documented in the pack.
+      </p>
+
+      <aside class="mt-8 rounded border border-dashed border-amber-600 bg-stone-900 p-5" aria-labelledby="open-q">
+        <p class="text-xs uppercase tracking-widest text-amber-500">Open question</p>
+        <h3 id="open-q" class="mt-1 font-semibold text-white">Does Kabwe zinc reach high-voltage semiconductors or fusion-reactor coils?</h3>
+        <p class="mt-2 text-sm text-stone-300">
+          <strong>No documented link found.</strong> No source in the data pack connects Kabwe zinc to high-voltage
+          semiconductors, fusion-reactor coils or Helion Energy. This is a question to test, not a finding.
+          <span class="tag tag-unv">UNVERIFIED</span>
+        </p>
+        <p class="mt-2 text-sm text-stone-400">
+          Context only: Helion has a 2023 power purchase agreement with Microsoft for its Orion plant in Malaga, WA
+          (50 MW by 2028), and a reported Series G valuation of US$15.5bn. <span class="tag tag-web">WEB</span> neimagazine.com
+          That is Helion's own valuation, not revenue from Kabwe zinc.
+        </p>
+        <p class="mt-2 text-sm text-stone-400">
+          The claim of an "80% rise in zinc demand by 2050" is also <span class="tag tag-unv">UNVERIFIED</span> and is not used here.
+        </p>
+      </aside>
+    </section>
+
+    <!-- 3. Financial ledger -->
+    <section id="ledger" data-panel role="tabpanel" aria-labelledby="tab-ledger" tabindex="0" hidden>
+      <h2 class="text-xl font-semibold text-white">Financial ledger: five nodes</h2>
+      <p class="mt-2 max-w-3xl text-stone-400">
+        Only cells the data pack supports are filled. Everything else reads
+        <span class="unv-cell">UNVERIFIED / not found</span>. The empty cells are part of the finding: the
+        sources show who is exposed far more clearly than who is paid.
+      </p>
+
+      <div class="mt-6 overflow-x-auto">
+        <table class="w-full min-w-[56rem] border-collapse text-left text-sm">
+          <caption class="sr-only">Supply chain nodes with beneficiary, figure, source tag and liability absorbed</caption>
+          <thead class="bg-stone-900 text-xs uppercase tracking-wider text-stone-400">
+            <tr>
+              <th scope="col" class="p-3">Node</th>
+              <th scope="col" class="p-3">Beneficiary</th>
+              <th scope="col" class="p-3">Figure</th>
+              <th scope="col" class="p-3">Source tag</th>
+              <th scope="col" class="p-3">Liability absorbed</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-800 align-top">
+            <tr>
+              <th scope="row" class="p-3 font-medium text-white">1. Scavenging</th>
+              <td class="p-3">Individual scavengers, paid per sack (one adult's 2016 account)</td>
+              <td class="p-3">2016: 50 kwacha (~US$5) per 25 kg sack; could fill up to 10 a day. Dated, single account; no 2025–26 figure found.</td>
+              <td class="p-3"><span class="tag tag-web">WEB</span> Global Press Journal, 23 Oct 2016</td>
+              <td class="p-3">Children as young as 7 do waste-pile work (HRW via BHRRC). &gt;95% of children near the mine have elevated blood lead.</td>
+            </tr>
+            <tr>
+              <th scope="row" class="p-3 font-medium text-white">2. Aggregation</th>
+              <td class="p-3">Traders and exporters appear in Sayari records, but their flows cannot be tied to Kabwe waste. Miners allege sales to Datong Industries, Chengde Mining and Superdeal Investments.</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found (Sayari has no prices, tonnage or margins)</td>
+              <td class="p-3"><span class="tag tag-sayari">SAYARI</span> <span class="tag tag-alleged">ALLEGED</span></td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+            </tr>
+            <tr>
+              <th scope="row" class="p-3 font-medium text-white">3. Refining</th>
+              <td class="p-3">Reprocessors named by HRW: South African, Chinese and local firms; Enviro Processing Ltd ("Black Mountain"); Hua Yu Sheng, permitted late 2025 (ownership <span class="tag tag-unv">UNVERIFIED</span>).</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found (no refiner margin in the pack)</td>
+              <td class="p-3"><span class="tag tag-web">WEB</span> HRW</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+            </tr>
+            <tr>
+              <th scope="row" class="p-3 font-medium text-white">4. Component fab</th>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found (no component-maker revenue or per-product zinc value)</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+            </tr>
+            <tr>
+              <th scope="row" class="p-3 font-medium text-white">5. Deployment</th>
+              <td class="p-3 unv-cell">UNVERIFIED / not found for Kabwe zinc. HRW names wind, solar and hydro as uses, without naming firms.</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+              <td class="p-3 unv-cell">UNVERIFIED / not found</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-8 grid gap-4 md:grid-cols-2">
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <h3 class="text-sm font-semibold text-white">Price benchmark (zinc metal; not any actor's revenue)</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-stone-300">
+            <li>About US$3,670–3,900/t in Sept–Oct 2026, after a 4-year high near US$4,000. <span class="tag tag-web">WEB</span> tradingeconomics.com</li>
+            <li>Nov 2025 LME cash average: US$3,186.65/t. <span class="tag tag-web">WEB</span> USGS MIS, Nov 2025</li>
+          </ul>
+        </div>
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <h3 class="text-sm font-semibold text-white">Costs that sit outside the five nodes</h3>
+          <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-stone-300">
+            <li>ZMERIP: US$65.6M IDA <em>credit</em> (a loan) for testing, treatment and hotspot remediation; the source was not removed. <span class="tag tag-web">WEB</span> World Bank</li>
+            <li>Estimated social cost of lead pollution: US$224–593M (2025–2049 lost earnings and mortality). Secondary source: Yamada et al. as cited by HRW. <span class="tag tag-web">WEB</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded border border-stone-700 bg-stone-900 p-5">
+        <h3 class="font-semibold text-amber-400">Policy proposal: Decentralized Cryptographic Provenance Ledger (DCPL)</h3>
+        <p class="mt-1 text-xs text-stone-400">The authors' proposal, not evidence. It has not been piloted, and the trade data show flows crossing several borders.</p>
+        <ol class="mt-3 list-decimal space-y-2 pl-5 text-sm text-stone-300">
+          <li><strong>Automated hash verification:</strong> every raw payload crossing a border generates a distributed token linked to a verified local Environmental Impact Assessment (EIA).</li>
+          <li><strong>Market metric reversal:</strong> unverified minerals are kept out of international exchange pricing tiers.</li>
+          <li><strong>Smart-contract supply locks:</strong> purchasing pipelines require traceability from extraction origin to deployment.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4. Biomedical -->
+    <section id="biomedical" data-panel role="tabpanel" aria-labelledby="tab-biomedical" tabindex="0" hidden>
+      <h2 class="text-xl font-semibold text-white">Biomedical harm: lead exposure in children</h2>
+      <p class="mt-2 max-w-3xl text-stone-400">These figures describe <strong class="text-stone-200">lead</strong>, not zinc.</p>
+
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <p class="text-3xl font-bold text-amber-500">&gt;95%</p>
+          <p class="mt-1 text-sm text-stone-300">of children near the mine have elevated blood lead.</p>
+          <p class="mt-2 text-xs text-stone-400"><span class="tag tag-web">WEB</span> 2018 study cited by HRW</p>
+        </div>
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <p class="text-3xl font-bold text-amber-500">~half</p>
+          <p class="mt-1 text-sm text-stone-300">need urgent medical treatment.</p>
+          <p class="mt-2 text-xs text-stone-400"><span class="tag tag-web">WEB</span> 2018 study cited by HRW</p>
+        </div>
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <p class="text-3xl font-bold text-amber-500">~200,000</p>
+          <p class="mt-1 text-sm text-stone-300">people exposed, at most ("up to").</p>
+          <p class="mt-2 text-xs text-stone-400"><span class="tag tag-web">WEB</span> HRW</p>
+        </div>
+        <div class="rounded border border-stone-700 bg-stone-900 p-4">
+          <p class="text-3xl font-bold text-amber-500">60,000 mg/kg</p>
+          <p class="mt-1 text-sm text-stone-300">peak soil lead, against a 200 mg/kg hazard level.</p>
+          <p class="mt-2 text-xs text-stone-400"><span class="tag tag-web">WEB</span> HRW</p>
+        </div>
+      </div>
+
+      <div class="mt-6 space-y-5 text-sm text-stone-300">
+        <div>
+          <h3 class="font-medium text-white">Blood lead levels</h3>
+          <p>Many children have blood lead above 45 µg/dL. <span class="tag tag-web">WEB</span> Wikipedia, Kabwe mine (tertiary source). "Many", not "all".</p>
+        </div>
+        <div>
+          <h3 class="font-medium text-white">Reported effects</h3>
+          <p>Learning disabilities, behavioural problems, organ damage, and miscarriages and stillbirths. <span class="tag tag-web">WEB</span> HRW / Jurist</p>
+        </div>
+        <div>
+          <h3 class="font-medium text-white">Child labour on the waste piles</h3>
+          <p>Children as young as 7 do waste-pile mining work. <span class="tag tag-web">WEB</span> HRW via BHRRC</p>
+        </div>
+        <div>
+          <h3 class="font-medium text-white">Estimated social cost</h3>
+          <p>US$224–593M in lost earnings and mortality, 2025–2049. Secondary source: Yamada et al. as cited by HRW. <span class="tag tag-web">WEB</span></p>
+        </div>
+      </div>
+
+      <div class="mt-8 rounded border border-dashed border-amber-600 bg-stone-900 p-5">
+        <h3 class="font-semibold text-amber-400">Mechanisms not checked against a source <span class="tag tag-unv">UNVERIFIED</span></h3>
+        <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-300">
+          <li>"Children absorb about 5× as much lead as adults." Standard toxicology, but not checked in this project.</li>
+          <li>Maternal bone-lead mobilisation (stored lead released into the bloodstream, for example during pregnancy or lactation, and passed to the infant). Standard toxicology, but not checked in this project.</li>
+        </ul>
+        <p class="mt-2 text-xs text-stone-400">No WHO or other citation has been confirmed for either. Treat both as background, not findings.</p>
+      </div>
+    </section>
+
+    <!-- 5. Trade map -->
+    <section id="trade" data-panel role="tabpanel" aria-labelledby="tab-trade" tabindex="0" hidden>
+      <h2 class="text-xl font-semibold text-white">Trade map: Zambian zinc ore exporters and buyers</h2>
+
+      <div class="mt-4 max-w-3xl rounded border border-amber-700/50 bg-stone-900 p-4 text-sm text-stone-300" role="note">
+        <strong class="text-amber-400">Caveat: none of this can be attributed to Kabwe waste.</strong>
+        Zambia-departure flows are largely transit via Tanzania and include DRC-origin concentrate (for example from
+        Kipushi). All counts below are <em>record counts</em> from Sayari, not tonnage or value; Sayari has no
+        prices, tonnage or margins. <span class="tag tag-sayari">SAYARI</span>
+      </div>
+
+      <h3 class="mt-8 font-medium text-white">Search: zinc, departure country Zambia: 488 supplier records</h3>
+      <p class="mt-1 text-sm text-stone-400">
+        Buyer-country record counts. The listed counts sum to more than 488, so they are not shares of the total.
+        Country list as provided; it does not include Singapore although International Ramadon (Singapore) appears
+        among the buyers below.
+      </p>
+      <figure class="mt-3" aria-label="Buyer-country record counts">
+        <ul class="space-y-2" id="country-bars"></ul>
+      </figure>
+      <p class="mt-4 text-sm text-stone-300">
+        Risk flags: 102 of the 488 supplier records carry ILAB child-labour flags. These are
+        country/product-level risk indicators, <strong>not evidence of child labour at those firms</strong>.
+        <span class="tag tag-sayari">SAYARI</span>
+      </p>
+
+      <h3 class="mt-10 font-medium text-white">Exporters of zinc ores and concentrates (HS 2608)</h3>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full min-w-[40rem] border-collapse text-left text-sm">
+          <caption class="sr-only">Exporters by shipment record count</caption>
+          <thead class="bg-stone-900 text-xs uppercase tracking-wider text-stone-400">
+            <tr>
+              <th scope="col" class="p-3">Exporter</th>
+              <th scope="col" class="p-3 text-right">Shipment records</th>
+              <th scope="col" class="p-3">Note</th>
+              <th scope="col" class="p-3">Sayari</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-800 align-top" id="exporter-rows"></tbody>
+        </table>
+      </div>
+      <p class="mt-3 max-w-3xl text-sm text-stone-300">
+        <strong class="text-white">Sable Zinc Kabwe Ltd</strong>: 121 records, listed under <em>copper</em> HS codes,
+        with 24 ships-to and 10 receives-from relations, including Chinese traders (Pure Trade Africa, Shenzhen Korno,
+        Xing He Co). The name suggests Kabwe; the HS codes do not. Whether it handles Kabwe waste is
+        <span class="tag tag-unv">UNVERIFIED</span>.
+        <a class="text-amber-400 underline" href="https://graph.sayari.com/resource/entity/knIwRc7SW_gfUpx8jXuRKQ" rel="noopener">Sayari Graph</a>
+      </p>
+
+      <h3 class="mt-10 font-medium text-white">Buyers of Zambian zinc ore</h3>
+      <p class="mt-1 text-sm text-stone-400">Entity records are fragmented, so counts per name understate or split real buyers.</p>
+      <ul class="mt-3 list-disc space-y-1 pl-5 text-sm text-stone-300">
+        <li>
+          Sprint Cargo Ltd: 3,284 shipments, latest 31 Jul 2026.
+          <a class="text-amber-400 underline" href="https://graph.sayari.com/resource/entity/fst43wEZ4UYxTVkRovRBJw" rel="noopener">Sayari Graph</a>
+        </li>
+        <li>Several Ivanhoe Marketing entities, latest July 2026. No relationship to any other "Ivanhoe" company is asserted here.</li>
+        <li>Labh Exims (India)</li>
+        <li>Green Dome General Trading (UAE)</li>
+        <li>Basetrade Global (UK)</li>
+        <li>International Ramadon (Singapore)</li>
+      </ul>
+      <p class="mt-3 text-xs text-stone-400"><span class="tag tag-sayari">SAYARI</span> Search date not recorded: <span class="tag tag-unv">UNVERIFIED</span>. Graph links need a Sayari login.</p>
+    </section>
+
+    <!-- 6. Methodology -->
+    <section id="methodology" data-panel role="tabpanel" aria-labelledby="tab-methodology" tabindex="0" hidden>
+      <h2 class="text-xl font-semibold text-white">Methodology &amp; data integrity</h2>
+      <p class="mt-2 max-w-3xl text-stone-400">
+        Every figure comes from a fixed data pack. Anything outside it is labelled UNVERIFIED. Sources whose URL was not
+        in the pack say so rather than guessing one.
+      </p>
+
+      <h3 class="mt-8 font-medium text-white">Source log</h3>
+      <div class="mt-3 overflow-x-auto">
+        <table class="w-full min-w-[48rem] border-collapse text-left text-sm">
+          <caption class="sr-only">Sources with URL, date and tag</caption>
+          <thead class="bg-stone-900 text-xs uppercase tracking-wider text-stone-400">
+            <tr>
+              <th scope="col" class="p-3">Source</th>
+              <th scope="col" class="p-3">URL</th>
+              <th scope="col" class="p-3">Date</th>
+              <th scope="col" class="p-3">Tag</th>
+              <th scope="col" class="p-3">Used for</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-stone-800 align-top" id="source-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="mt-10 font-medium text-white">Caveats</h3>
+      <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-300">
+        <li>Kabwe's poisoning is mainly lead. Zinc is the co-product that makes waste reprocessing profitable.</li>
+        <li>Sayari flows from Zambia are largely transit via Tanzania and include DRC-origin concentrate. They cannot be attributed to Kabwe waste.</li>
+        <li>Sayari figures are record counts, not tonnage or value. Entity records are fragmented.</li>
+        <li>ILAB flags are country/product-level risk indicators, not evidence of child labour at any firm.</li>
+        <li>Mine start year differs by source (1902 / 1904 / 1906), so a range is shown.</li>
+        <li>The Anglo American claims are alleged and disputed. Sales to Datong Industries, Chengde Mining and Superdeal Investments are alleged by miners and unanswered by the companies.</li>
+        <li>The US$224–593M social cost is a secondary-source estimate. Scavenger pay is a single 2016 account.</li>
+        <li>Helion's US$15.5bn valuation is its own valuation, not revenue from Kabwe zinc.</li>
+        <li>The DCPL is a policy proposal and has not been piloted.</li>
+      </ul>
+
+      <h3 class="mt-10 font-medium text-white">Claims I could not verify</h3>
+      <ul class="mt-2 list-disc space-y-2 pl-5 text-sm text-stone-300">
+        <li>Hua Yu Sheng's ownership (no Sayari entity record).</li>
+        <li>That any Sayari export flow originates from Kabwe waste, or that Sable Zinc Kabwe Ltd handles it.</li>
+        <li>That Datong Industries, Chengde Mining or Superdeal Investments bought Kabwe material (miners' allegation only).</li>
+        <li>The end date of ZMERIP.</li>
+        <li>The outcome of the African Union committee's consideration, scheduled for 20 Oct 2026.</li>
+        <li>Refiner margins, component-maker revenue and per-product zinc value.</li>
+        <li>Scavenger pay from 2025–2026. The earlier "$1–2/day child wage" has been removed as unsourced.</li>
+        <li>Any link from Kabwe zinc to high-voltage semiconductors, fusion-reactor coils or Helion Energy.</li>
+        <li>"Global zinc demand rises 80% by 2050."</li>
+        <li>"Children absorb 5× as much lead as adults" and maternal bone-lead mobilisation: standard toxicology, not checked here.</li>
+        <li>Removed as unsourced: CHIPS Act subsidies, "trillions in net-zero valuations", galvanizing "for maritime wind turbines", and the claim that Zambia overrode its own environmental law.</li>
+        <li>The title of the March 2025 HRW report: not in the data pack, so it is cited by URL only.</li>
+        <li>The buyer-country list omits Singapore though International Ramadon is listed as Singapore-based; the list may be incomplete.</li>
+      </ul>
+
+      <h3 class="mt-10 font-medium text-white">Backlog</h3>
+      <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-stone-400">
+        <li>Kabwe-origin export data</li>
+        <li>Refiner margins</li>
+        <li>Scavenger pay with a 2025–2026 source</li>
+        <li>Hua Yu Sheng ownership via Chinese company registry</li>
+        <li>Verify the semiconductor/fusion link, or drop it</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="border-t border-stone-800 py-6 text-center text-xs text-stone-500">
+    Project Trace · open-source educational repository
+  </footer>
+
+  <script>
+    // ---- Data (all values from the data pack) ----
+    const ZINC_USE = [
+      ['Galvanizing', 60], ['Zinc alloys', 15], ['Compounds', 11],
+      ['Brass and bronze', 9], ['Semi-manufactures', 4], ['Other', 1],
+    ];
+
+    const COUNTRIES = [
+      ['Tanzania', 265], ['DRC', 177], ['China', 67], ['India', 11], ['UK', 11],
+      ['Japan', 11], ['UAE', 7], ['South Africa', 6], ['Kenya', 5],
+    ];
+
+    const G = 'https://graph.sayari.com/resource/entity/';
+    const EXPORTERS = [
+      ['Polytra Zambia Ltd', '2,333', '', 'y6EgBfVB0lnLP3QxRcVmBQ'],
+      ['Kipushi Corporation SA', '846', 'Two records (846 and 561). Kipushi is in the DRC.', '0zsVQ4aewVn1VV-FoDb28g'],
+      ['Kipushi Corporation SA', '561', 'Second record of the same name.', '5xCChKFc3Twqj4VejQipbg'],
+      ['Blecozed Investments', '322', 'Also zinc oxide (HS 2817).', null],
+      ['Kashfew Metal Trading', '232', '', null],
+      ['Tasdemir Mining Co', '188', '', null],
+      ['Nextlevel Consultancy Service', '156', '', null],
+      ['Impala Terminals Zambia', '145', 'Flagged Chinese-SOE-adjacent.', 'aXC1rAKwlvhT1VWKP9qhYA'],
+      ['Mash Rock Mining', '76', '', null],
+    ];
+
+    const SOURCES = [
+      ['HRW: Zambia mining toxic lead waste poisons children', 'hrw.org/news/2025/03/05/zambia-mining-toxic-lead-waste-poisons-children', '5 Mar 2025', 'WEB', 'History, waste tonnage, reprocessors, soil lead, health, critical-minerals designation'],
+      ['HRW op-ed: Zambia’s poisoned children have waited long enough', 'hrw.org/news/2026/10/20/zambias-poisoned-children-have-waited-long-enough-africa-needs-to-act', '20 Oct 2026', 'WEB', 'Hua Yu Sheng permit, AU complaint'],
+      ['Business & Human Rights Resource Centre (BHRRC)', 'business-humanrights.org (full URL not in data pack)', '5 Nov 2025 (appeal hearing)', 'WEB', 'Anglo American class action; child labour from age 7'],
+      ['World Bank press release (ZMERIP)', 'worldbank.org (full URL not in data pack)', '16 Dec 2016', 'WEB', 'US$65.6M IDA credit'],
+      ['Global Press Journal', 'URL not in data pack', '23 Oct 2016', 'WEB', 'Scavenger pay'],
+      ['Trading Economics: zinc', 'tradingeconomics.com/commodity/zinc', 'Sept–Oct 2026 prices; access date not recorded', 'WEB', 'Zinc price'],
+      ['USGS Mineral Industry Surveys (MIS)', 'URL not in data pack', 'Nov 2025', 'WEB', 'LME cash average'],
+      ['ILZSG via Natural Resources Canada', 'URL not in data pack', '2024 data', 'WEB', 'Global zinc use by sector'],
+      ['Jurist', 'URL not in data pack', 'Not recorded', 'WEB', 'Reported health effects (with HRW)'],
+      ['Wikipedia: Kabwe mine', 'URL not in data pack', 'Not recorded', 'WEB', '"Many children above 45 µg/dL" (tertiary)'],
+      ['Yamada et al., as cited by HRW', 'Secondary; via the HRW report above', 'Not recorded', 'WEB', 'Social cost US$224–593M'],
+      ['neimagazine.com', 'URL not in data pack', 'Not recorded', 'WEB', 'Helion PPA and valuation (context only)'],
+      ['Sayari Graph: zinc, departure country Zambia', 'graph.sayari.com/resource/entity/<entity_id>', 'Search date not recorded', 'SAYARI', 'Record counts, exporters, buyers, ILAB flags'],
+    ];
+
+    // ---- Rendering ----
+    const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const barRow = (label, value, max, unit) => `
+      <li class="grid grid-cols-[8.5rem_1fr_3rem] items-center gap-3 text-sm" title="${esc(label)}: ${value}${unit}">
+        <span class="text-stone-300">${esc(label)}</span>
+        <span class="bar-track block h-4"><span class="bar-fill block h-4" style="width:${(value / max * 100).toFixed(1)}%"></span></span>
+        <span class="text-right tabular-nums text-stone-200">${value}${unit}</span>
+      </li>`;
+
+    document.getElementById('zn-bars').innerHTML = ZINC_USE.map(([l, v]) => barRow(l, v, 60, '%')).join('');
+    document.getElementById('zn-table').innerHTML = ZINC_USE.map(([l, v]) => `<tr><th scope="row" class="py-1 pr-4 font-normal">${esc(l)}</th><td class="py-1">${v}%</td></tr>`).join('');
+    document.getElementById('country-bars').innerHTML = COUNTRIES.map(([l, v]) => barRow(l, v, 265, '')).join('');
+
+    document.getElementById('exporter-rows').innerHTML = EXPORTERS.map(([n, c, note, id]) => `
+      <tr>
+        <th scope="row" class="p-3 font-medium text-white">${esc(n)}</th>
+        <td class="p-3 text-right tabular-nums">${c}</td>
+        <td class="p-3 text-stone-400">${esc(note)}</td>
+        <td class="p-3">${id ? `<a class="text-amber-400 underline" href="${G}${id}" rel="noopener">Graph</a>` : '<span class="text-stone-500">no ID in pack</span>'}</td>
+      </tr>`).join('');
+
+    document.getElementById('source-rows').innerHTML = SOURCES.map(([s, u, d, t, use]) => `
+      <tr>
+        <th scope="row" class="p-3 font-medium text-white">${esc(s)}</th>
+        <td class="p-3 break-all text-stone-300">${esc(u)}</td>
+        <td class="p-3 text-stone-300">${esc(d)}</td>
+        <td class="p-3"><span class="tag ${t === 'SAYARI' ? 'tag-sayari' : 'tag-web'}">${t}</span></td>
+        <td class="p-3 text-stone-400">${esc(use)}</td>
+      </tr>`).join('');
+
+    // ---- Tabs ----
+    const tabs = [...document.querySelectorAll('.tab')];
+    const panels = document.querySelectorAll('[data-panel]');
+
+    function show(id) {
+      panels.forEach(p => { p.hidden = p.id !== id; });
+      tabs.forEach(t => {
+        const on = t.dataset.view === id;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+      });
+      history.replaceState(null, '', '#' + id);
+    }
+
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t.dataset.view));
+      t.addEventListener('keydown', e => {
+        const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!d) return;
+        const next = tabs[(i + d + tabs.length) % tabs.length];
+        next.focus();
+        show(next.dataset.view);
+      });
+    });
+    const initial = location.hash.slice(1);
+    show([...panels].some(p => p.id === initial) ? initial : 'timeline');
+  </script>
+</body>
+</html>
